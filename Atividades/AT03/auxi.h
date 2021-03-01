@@ -1,0 +1,1 @@
+int dobrar(int x);
