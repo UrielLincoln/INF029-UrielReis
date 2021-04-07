@@ -232,7 +232,7 @@ void listar()
                 printf("||///////////////////////Alunos cadastrados no sistema///////////////////////||\n");
                 for(cont=1;cont<=qtda;cont++)
                 {
-                    if(alunos[cont].cadastrado == 1 && alunos[cont].sexo) == 'f' || (alunos[cont].cadastrado == 1 && alunos[cont].sexo == 'F'))
+                    if((alunos[cont].cadastrado == 1 && alunos[cont].sexo) == 'f' || (alunos[cont].cadastrado == 1 && alunos[cont].sexo == 'F'))
                     {
                             //printf("Valor de CI: %d Valor de cont %d\n", ci,cont);
                             printf("|| Numero da Matricula: %d\n", alunos[cont].matricula);
@@ -748,7 +748,7 @@ void listarp()
                 printf("||///////////////////////Professores cadastrados no sistema///////////////////////||\n");
                 for(cont=1;cont<=qtdp;cont++)
                 {
-                    if(prof[cont].cadastrado == 1 && alunos[cont].sexo) == 'm' || (prof[cont].cadastrado == 1 && alunos[cont].sexo == 'M'))
+                    if((prof[cont].cadastrado == 1 && alunos[cont].sexo) == 'm' || (prof[cont].cadastrado == 1 && alunos[cont].sexo == 'M'))
                     {
                             printf("|| Numero da Matricula: %d\n", prof[cont].matricula);
                             printf("|| Nome: %s\n", prof[cont].nome);
@@ -767,7 +767,7 @@ void listarp()
                 printf("||///////////////////////Professores cadastrados no sistema///////////////////////||\n");
                 for(cont=1;cont<=qtdp;cont++)
                 {
-                    if(prof[cont].cadastrado == 1 && prof[cont].sexo) == 'f' || (prof[cont].cadastrado == 1 && prof[cont].sexo == 'F'))
+                    if((prof[cont].cadastrado == 1 && prof[cont].sexo) == 'f' || (prof[cont].cadastrado == 1 && prof[cont].sexo == 'F'))
                     {
                             printf("|| Numero da Matricula: %d\n", prof[cont].matricula);
                             printf("|| Nome: %s\n", prof[cont].nome);
