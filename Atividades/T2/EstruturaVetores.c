@@ -98,8 +98,6 @@ int inserirNumeroEmEstrutura(int posicao, int valor)
             var[posicao - 1].aux[var[posicao - 1].qtd] = valor;
             var[posicao - 1].qtd ++;
             return SUCESSO;
-                
-                
             }
             
             else
@@ -166,9 +164,23 @@ int excluirNumeroEspecificoDeEstrutura(int posicao, int valor)
     if(var[posicao - 1].qtd == 0)
         return ESTRUTURA_AUXILIAR_VAZIA;
     
+    int i = 1;
+    for(i = 1; i < var[posicao - 1].qtd; i++)//for(i = 1; var[posicao - 1].aux[i] != NULL, i++)
+    {
+        if(var[posicao - 1].aux[i] == valor)
+        {
+        
+         int auxY = var[posicao - 1].aux[i];
+         var[posicao - 1].aux[i] = var[posicao - 1].aux[i+1];
+         var[posicao - 1].aux[i+1] = auxY;
+         var[posicao - 1].qtd--;
+         return SUCESSO; 
+        } 
+        //else
+           // return NUMERO_INEXISTENTE;
+    }
     
-    
-    
+    return NUMERO_INEXISTENTE;
 }
 
 // se posição é um valor válido {entre 1 e 10}
@@ -197,15 +209,15 @@ int getDadosEstruturaAuxiliar(int posicao, int vetorAux[])
 {
     if(posicao < 1 || posicao > 10)
         return POSICAO_INVALIDA;
-    if(var[posicao - 1].aux == NULL) 
+    if(var[posicao - 1].qtd == 0) 
         return SEM_ESTRUTURA_AUXILIAR;
 
     for(int i = 0; i<var[posicao -1].qtd;i++)
     {
-        vetorAux[i] = var[posicao -1].aux[i];        
+        vetorAux[i] = var[posicao -1].aux[i];
     }  
-    return SUCESSO;
 
+    return SUCESSO;
 }
 
 /*
@@ -221,14 +233,6 @@ int getDadosOrdenadosEstruturaAuxiliar(int posicao, int vetorAux[])
 {
 
     int retorno = 0;
-    
-    if(posicao < 1 || posicao > 10)
-        return POSICAO_INVALIDA;
-    if(var[posicao - 1].qtd == NULL) 
-        return SEM_ESTRUTURA_AUXILIAR;
-    
-    
-    
 
     return retorno;
 }
