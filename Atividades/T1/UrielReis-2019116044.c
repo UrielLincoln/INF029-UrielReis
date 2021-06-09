@@ -27,7 +27,6 @@
 #include <locale.h>
 /*
 ## função utilizada para testes  ##
-
  somar = somar dois valores
 @objetivo
     Somar dois valores x e y e retonar o resultado da soma
@@ -45,7 +44,6 @@ int somar(int x, int y)
 
 /*
 ## função utilizada para testes  ##
-
  fatorial = fatorial de um número
 @objetivo
     calcular o fatorial de um número
@@ -585,7 +583,6 @@ int q3(char *texto, char c, int isCaseSensitive)
         posicoes[1] = 16;
         Observe que o índice da posição no texto deve começar ser contado a partir de 1.
         O retorno da função, n, nesse caso seria 1;
-
  */
 int q4(char *strTexto, char *strBusca, int posicoes[30])
 {
@@ -596,7 +593,7 @@ int q4(char *strTexto, char *strBusca, int posicoes[30])
     //"áàãâä" -95 a 92 //"éèêë" -88 a -85//"íìîï"" -84 a -81//"óòõôö"" -77 a -74//úùüû -71 a -68
     int texto_int[100]; //A : -128 A -124//E : -120 A -117//I : -116 A -113// O : -109 A -106//U : -103 A -100 
     int texto_int2[100];
-    int a, b;
+    int a, b = 0;
       
     for (a = 0; strTexto[a] != '\0'; a+=1)//percorre a string que foi passada
     {
